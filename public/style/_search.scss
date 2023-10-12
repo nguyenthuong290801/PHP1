@@ -1,0 +1,72 @@
+.input-box {
+    position: relative;
+    height: 50px;
+    max-width: 950px;
+    width: 100%;
+    background: transparent;
+    margin: 0 20px;
+    margin-bottom: 15px;
+  
+    i, .button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    i {
+      left: 20px;
+      font-size: 30px;
+      color: #707070;
+    }
+  
+    input {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      font-size: 18px;
+      font-weight: 400;
+      border: none;
+      padding: 0 50px 0 35px;
+      background-color: transparent;
+    }
+  
+    .button {
+      right: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $white-color;
+      border: none;
+      padding: 5px 25px;
+      border-radius: 6px;
+      background-color: $orange-color;
+      cursor: pointer;
+  
+      &:active {
+        transform: translateY(-50%) scale(0.98);
+      }
+    }
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 500px) {
+    .input-box {
+      height: 66px;
+      margin: 0 8px;
+  
+      i {
+        left: 12px;
+        font-size: 25px;
+      }
+  
+      input {
+        padding: 0 112px 0 50px;
+      }
+  
+      .button {
+        right: 12px;
+        font-size: 14px;
+        padding: 8px 18px;
+      }
+    }
+  }
+  

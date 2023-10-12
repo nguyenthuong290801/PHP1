@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import 'var';
+@import 'mixins';
+@import 'form';
+@import 'search';
+
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: roboto;
+    scroll-margin-top: 120px;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: $orange-color;
+    color: $white-color;
+}
+
+.button {
+    @include styleButton();
+}
+
+.text-orange {
+    color: $orange-color;
+
+    &:hover {
+        color: $orange-color;
+    }
+}
+
+.text-black {
+    color: $black-color;
+
+    &:hover {
+        color: $black-color;
+    }
+}
+
+.bg-orange {
+    background-color: $orange-color;
+}
+
+.bg-black {
+    background-color: $orange-color;
+}
+
+.h-hidden {
+    height: 250px;
+    overflow: hidden;
+}
+
+.hover-img {
+    transition: all 2.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-150px);
+    }
+}
+
+.m-w {
+    min-width: 300px;
+}
+
+h1 {
+    span {
+        font-size: 50px;
+    }
+}
+
+li {
+    @include styleHover();
+}
+
+.m-t {
+    margin-top: 100px;
+}
+
+.laptop {
+    width: 100%;
+
+    .main-img {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .screen {
+        position: absolute;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        width: 80%;
+        height: 85%;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            cursor: pointer;
+        }
+    }
+
+}
